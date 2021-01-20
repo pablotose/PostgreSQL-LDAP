@@ -26,9 +26,21 @@
   > $ sudo -i -u postgres
   
   - Ahora estaremos en una shell como el "usuario" postgres , si lanzamos el         comando psql , estaremos dentro de PostgreSQL como el usuario postgres.
-  
-  
+    
 
 **Instalación Open LDAP**
 
+- Ahora instalaremos OpenLDAP sobre un Ubuntu Server 20.04 , antes que nada lo que tendremos que hacer será actualizar la lista de paquetes 
+
+> $ sudo apt update
+
+- Para poder instalar SLAP y otras utilidades de LDAP , tendremos que ejecutar el siguiente comando 
+
+> $ sudo apt install slapd ldap-utils 
+
+- Durante la instalación , se nos lanzará una pantalla para poder poner la contraseña del usuario Administrador de OpenLDAP.
+
+FOTO DE LA PANTALLITA
+
+**-- Configuración de OpenLDAP**
 
