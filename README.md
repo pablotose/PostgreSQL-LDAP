@@ -2,10 +2,10 @@
 
 
 
-**######Instalación PostgreSQL 12**
+**  #####Instalación PostgreSQL 12**
 
 
 
-**### Instalación Open LDAP**
+** ### Instalación Open LDAP**
 
 
