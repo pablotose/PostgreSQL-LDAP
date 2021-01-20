@@ -8,8 +8,6 @@
   
   > $ sudo apt update
   
-  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/hola.png)
-
 
   - Una vez actualizado la lista de paquetes , lo que tenemos que hacer es intalar PostgreSQL 12 , para ello introducimos el siguiente comando en la terminal 
   
