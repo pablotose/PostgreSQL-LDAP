@@ -2,10 +2,33 @@
 
 
 
-**  #####Instalación PostgreSQL 12**
+**Instalación PostgreSQL 12**
 
+  - Lo primero que tendremos que hacer es actualizar la lista de paquetes de Ubuntu 
+  
+  > $ sudo apt update
 
+  - Una vez actualizado la lista de paquetes , lo que tenemos que hacer es intalar PostgreSQL 12 , para ello introducimos el siguiente comando en la terminal 
+  
+  > $ sudo apt-get install postgresql-12
+  
+  - Tras instalar PostgreSQL y sus dependencias se crea un nuevo servicio, el           servicio en cuestión es postgresql.service el cual queda inicializado, en           ejecución y habilitado para su inicio automático con cada arranque del               sistema.
+  
+  - Podemos comprobar el estado del servicio con el comando 
+  
+  > $ sudo systemctl status postgresql
+  
+  
+  FOTO DEL SERVICIO ACTIVO.
+  
+  - Para conectarnos a la base de datos de postgreSQL , lo que tenemos que hacer     es iniciar sesión como el usuario postgres
+  
+  > $ sudo -i -u postgres
+  
+  - Ahora estaremos en una shell como el "usuario" postgres , si lanzamos el         comando psql , estaremos dentro de PostgreSQL como el usuario postgres.
+  
+  
 
-** ### Instalación Open LDAP**
+**Instalación Open LDAP**
 
 
