@@ -59,5 +59,19 @@ Cuando lanzamos este comando , se nos mostrará una pantalla en la cual podremos
 FOTITOOOOOO
 
 
+  - Agregamos nuestro DNS domain name para construir el base DN de nuestro LDAP       directory
 
+FOTO
+
+  - Añadimos el nombre de nuestra organización.
+  
+  FOTO
+  
+  - Volvemos a asignarle una contraseña al usuario Administrador.
+  
+  
+  - Elegimos mover la base de datos antigua SLAPD y lo removemos.
+  
+  
+Si ahora volvemos a ejecutar el comando `slapcat` podemos ver que todos los cambios han sido efectuados.
 
