@@ -33,7 +33,7 @@
 
 - Ahora instalaremos OpenLDAP sobre un Ubuntu Server 20.04 , antes que nada lo que tendremos que hacer será actualizar la lista de paquetes 
 
-> $ sudo apt update
+> **$ sudo apt update**
 
 - Para poder instalar SLAP y otras utilidades de LDAP , tendremos que ejecutar el siguiente comando 
 
@@ -44,4 +44,19 @@
 FOTO DE LA PANTALLITA
 
 **-- Configuración de OpenLDAP**
+
+- Por defecto durante la instalación de SLAPD , el instalador no no muestra una pantalla donde podamos introducir nuestra configuración del dominio. Por lo que esto vendrá por defecto , si lanzamos el siguiente comando veremos una configuración básica de LDAP.
+
+> $ slapcat
+
+FOTO 
+
+- Para poder poner tu propia información , necesitaremos reconfigurar el paquete SLAPD.
+
+> $ dpkg-reconfigure slapd
+
+- Cuando lanzamos este comando , se nos mostrará una pantalla en la cual podremos configurar la configuración del servidor LDAP , le daremos a que no y procederemos con la configuración.
+
+-- nhoneb
+
 
