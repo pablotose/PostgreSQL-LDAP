@@ -43,7 +43,8 @@ Para poder instalar SLAP y otras utilidades de LDAP , tendremos que ejecutar el 
 
 Durante la instalación , se nos lanzará una pantalla para poder poner la contraseña del usuario Administrador de OpenLDAP.
 
-FOTO DE LA PANTALLITA
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/install_slapd.png)
+
 
 **-- Configuración de OpenLDAP**
 
@@ -51,29 +52,38 @@ Por defecto durante la instalación de SLAPD , el instalador no no muestra una p
 
   `$ slapcat`
 
-FOTO 
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/slapcat.png)
+
 
 Para poder poner tu propia información , necesitaremos reconfigurar el paquete SLAPD.
 
   `$ dpkg-reconfigure slapd`
 
 Cuando lanzamos este comando , se nos mostrará una pantalla en la cual podremos configurar la configuración del servidor LDAP , le daremos a que no y procederemos con la configuración.
-FOTITOOOOOO
+
+ 
+ ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/reconfigure_slapd.png)
 
 
   - Agregamos nuestro DNS domain name para construir el base DN de nuestro LDAP directory
 
-FOTO
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/dns.png)
+
 
   - Añadimos el nombre de nuestra organización.
   
-  FOTO
+    ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/organization_name.png)
+
   
   - Volvemos a asignarle una contraseña al usuario Administrador.
   
   
   - Elegimos mover la base de datos antigua SLAPD y lo removemos.
   
+    ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/old_database.png)
+
   
 Si ahora volvemos a ejecutar el comando `slapcat` podemos ver que todos los cambios han sido efectuados.
+
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/slapcat_2.png)
 
