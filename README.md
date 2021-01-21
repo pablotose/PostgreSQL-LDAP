@@ -19,12 +19,14 @@ Podemos comprobar el estado del servicio con el comando
   
   `$ sudo systemctl status postgresql`
   
-  
-  FOTO DEL SERVICIO ACTIVO.
+![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/service_postgresql.png)
+
   
 Para conectarnos a la base de datos de postgreSQL , lo que tenemos que hacer     es iniciar sesión como el usuario postgres
   
   `$ sudo -i -u postgres`
+  
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/psql.png)
   
 Ahora estaremos en una shell como el "usuario" postgres , si lanzamos el         comando psql , estaremos dentro de PostgreSQL como el usuario postgres.
     
