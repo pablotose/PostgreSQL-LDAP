@@ -86,4 +86,35 @@ Cuando lanzamos este comando , se nos mostrará una pantalla en la cual podremos
 Si ahora volvemos a ejecutar el comando `slapcat` podemos ver que todos los cambios han sido efectuados.
 
   ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/slapcat_2.png)
+  
+  
+  Una vez que tenemos todo lo anterior configurado, lo que tendremos que hacer será conectarnos al servidor LDAP por medio de Apache Directory Studio (https://directory.apache.org/studio/) , para ello iniciamos la aplicación y creamos una conexión nueva 
+  
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/conexion_1_ldap.png)
+  
+  ![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/conexion_2.png)
+  
+  Una vez que estemos conectados a nuestro servidor LDAP podemos ver el arbol que tenemos configurado en LDAP en la parte izquierda, a ese arbol le vamos a añadir una unidad organizativa (ou) llamada users y un usuario (uid) llamado prueba quedandonos el árbol configurado tal que así 
+  
+![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/apache_directory.png)
 
+Ahora lo que vamos a hacer será configurar PostgreSQL para que podamos conectarnos a la base de datos usando LDAP, para ello lo que tendremos que hacer será ir a la siguiente ruta `$ /etc/postgresql/12/main/pg_hba.conf` y añadimos la siguiente línea
+
+![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/pg_hba.png)
+
+La siguiente linea lo que indica es que vamos a usar un método de conexión basado en LDAP apuntando a la dirección del servidor LDAP, añadiendo el Base DN del dominio y añadiendole que busque en el árbol el atributo uid , si el usuario coincide con el nombre y la contraseña que tiene el objeto uid , entonces tendremos un inicio de sesión correcto.
+
+Reiniciamos el servicio de postgreSQL
+
+`$ sudo service postgresql restart`
+
+Antes de probar que podemos identificarnos y autenticarnos el postgreSQL usando la autenticación LDAP lo que tendremos que hacer será crear un rol de login en PostgreSQL al cual yo le voy a dar el mismo nombre pero no tiene porque tenerlo.
+
+Para ello lo que vamos a hacer será iniciar sesión en postgreSQL y crear el rol de la siguiente manera 
+
+
+![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/role.png)
+
+Ahora si probamos a hacer una conexión como el usuario prueba creado conectandonos a la base de datos "postgres" para ello realizamos la siguiente sentencia 
+
+![alt text](https://github.com/pablotose/PostgreSQL-LDAP/blob/master/inicio_correcto.png)
